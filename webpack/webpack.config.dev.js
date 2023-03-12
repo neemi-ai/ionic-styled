@@ -1,0 +1,25 @@
+module.exports = {
+  mode: 'development',
+  entry: ['./src/index.tsx'],
+  module: {
+    rules: require('./webpack.rules'),
+  },
+  output: {
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
+  },
+  plugins: require('./webpack.plugins'),
+  stats: 'errors-warnings',
+  devtool: 'cheap-module-source-map',
+  devServer: {
+    open: true,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
+  performance: {
+    hints: false,
+  },
+};

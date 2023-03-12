@@ -1,0 +1,100 @@
+{
+  "name": "ionic-styled",
+  "short_name": "FCG",
+  "description": "The first styled components library for Ionic React",
+  "version": "0.0.2",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "export NODE_ENV=development && node scripts/start.js",
+    "build": "rollup -c",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "@capacitor/app": "4.1.1",
+    "@capacitor/cli": "4.6.1",
+    "@capacitor/core": "4.6.1",
+    "@capacitor/haptics": "4.1.0",
+    "@capacitor/keyboard": "4.1.0",
+    "@capacitor/status-bar": "4.1.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.6",
+    "@ionic/react": "^6.5.0",
+    "@ionic/react-router": "^6.5.0",
+    "ionicons": "^6.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/chrome": "^0.0.196",
+    "@types/ionic": "^3.19.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-query": "^1.2.9",
+    "@types/react-router": "^5.1.11",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/redux-logger": "^3.0.9",
+    "@types/styled-components": "^5.1.26",
+    "@types/styled-system": "^5.1.16",
+    "@types/webextension-polyfill": "^0.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@webcomponents/webcomponentsjs": "^2.7.0",
+    "babel-loader": "^8.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "json-server": "^0.17.0",
+    "prettier": "^2.7.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "styled-components": "^5.3.8",
+    "typescript": "^4.9.5",
+    "webpack-cli": "^5.0.0"
+  }
+}
