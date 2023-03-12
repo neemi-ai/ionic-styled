@@ -1,10 +1,9 @@
-import { IonContent } from "@ionic/react";
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import IonicStyled from "../core/IonicStyled";
-import Button  from './Button';
-import { type ButtonProps } from "./Button"
+import Button  from '../components/Button';
+import { type ButtonProps } from "../components/Button"
+import PreviewTemplate from "../core/PreviewTemplate";
 
 export default {
   title: 'Ionic Styled/Button',
@@ -13,11 +12,9 @@ export default {
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = args => (
-    <IonicStyled>
-      <IonContent>
-        <Button {...args} />
-      </IonContent>
-    </IonicStyled>
+  <PreviewTemplate>
+    <Button {...args} />
+  </PreviewTemplate>
 );
 
 export const Primary = Template.bind({});
@@ -29,7 +26,22 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   disabled: false,
-  children: "Secondary"
+  children: "Secondary",
+  color: "secondary"
+};
+
+export const Teriary = Template.bind({});
+Teriary.args = {
+  disabled: false,
+  children: "Teriary",
+  color: "tertiary"
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+  disabled: false,
+  children: "Outline",
+  fill: "outline"
 };
 
 export const Disabled = Template.bind({});
@@ -45,15 +57,16 @@ Small.args = {
   children: 'Small'
 };
 
-export const Default = Template.bind({});
-Default.args = {
-  disabled: false,
-  children: 'Default'
-};
-
 export const Large = Template.bind({});
 Large.args = {
   disabled: false,
   size:"large",
   children: 'Large'
+};
+
+export const Padding = Template.bind({});
+Padding.args = {
+  disabled: false,
+  padding: "8px",
+  children: 'Padding'
 };

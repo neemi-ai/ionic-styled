@@ -24,10 +24,6 @@
       "restParams": true
     }
   },
-  "globals": {
-    "PINS_ENV": true,
-    "BUILD_VERSION": true
-  },
   "env": {
     "browser": true,
     "node": true,
@@ -35,6 +31,7 @@
     "jest": true
   },
   "rules": {
+    "indent": ["error", 2],
     "array-callback-return": [0],
     "arrow-parens": ["error", "as-needed"],
     "class-methods-use-this": "warn",

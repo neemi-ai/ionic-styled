@@ -1,14 +1,9 @@
-import styled from '@emotion/styled';
 import { IonButton, IonIcon } from '@ionic/react';
 import React from 'react';
 
+import ionicStyled from "../util/ionicStyled";
 import mapStyles from '../util/mapStyles';
-
-type Size = 'default' | 'small' | 'large';
-type Expand = 'full' | 'block';
-type Shape = 'round';
-type Fill = 'solid' | 'outline' | 'clear';
-type Color = 'primary' | 'secondary' | 'tertiary' | 'success' | 'warning' | 'danger' | 'light' | 'medium' | 'dark';
+import paddingProps from "../core/paddingProps";
 
 const CssPropMap = {
   background: '--background',
@@ -28,12 +23,9 @@ const CssPropMap = {
   colorFocused: '--color-focused',
   colorHover: '--color-hover',
   opacity: '--opacity',
-  paddingBottom: '--padding-bottom',
-  paddingEnd: '--padding-end',
-  paddingStart: '--padding-start',
-  paddingTop: '--padding-top',
   rippleColor: '--ripple-color',
-  transition: '--transition'
+  transition: '--transition',
+  ...paddingProps
 };
 
 type MapKey = keyof typeof CssPropMap;
@@ -41,18 +33,11 @@ type MapKey = keyof typeof CssPropMap;
 type Map = { [key in MapKey]?: string };
 
 export type ButtonProps = {
-  onClick: () => void;
-  children?: React.ReactNode;
   leftIcon?: string;
   rightIcon?: string;
-  expand?: Expand;
-  fill?: Fill;
-  size?: Size;
-  shape?: Shape;
-  color?: Color;
 } & typeof IonButton.defaultProps & Map;
 
-const StyledIonButton = styled(IonButton)<ButtonProps>(mapStyles(CssPropMap));
+const StyledIonButton = ionicStyled(IonButton)<ButtonProps>(mapStyles(CssPropMap));
 
 const Button: React.FC<ButtonProps> = ({
   children,
