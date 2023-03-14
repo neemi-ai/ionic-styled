@@ -18,7 +18,7 @@ export type IconProps = {
   id?: string;
 } & typeof IonIcon.defaultProps & Map;
 
-const StyledIonIcon = styled(IonIcon)<IconProps>(
+const StyledIcon = styled(IonIcon)<IconProps>(
   mapStyles(CssPropMap),
   ({ cursor }: { cursor?: string }) => ({ cursor: cursor || 'default' }),
   ({ fontSize }: { fontSize?: string | number }) => {
@@ -38,7 +38,7 @@ const StyledIonIcon = styled(IonIcon)<IconProps>(
   }
 )
 
-const Icon: React.FC<IconProps> = ({ 
+const Icon: React.FC<IconProps> = ({
   fontSize = 16,
   src,
   icon,
@@ -48,7 +48,7 @@ const Icon: React.FC<IconProps> = ({
   ...props
 }) => {
   return (
-    <StyledIonIcon
+    <StyledIcon
       color={color}
       fontSize={fontSize}
       icon={icon}
