@@ -1,7 +1,7 @@
 import { IonContent } from '@ionic/react';
 import React from 'react';
 
-import paddingProps from "../core/paddingProps";
+import paddingProps from "../custom/paddingProps";
 import ionicStyled from "../util/ionicStyled";
 import mapStyles from '../util/mapStyles';
 

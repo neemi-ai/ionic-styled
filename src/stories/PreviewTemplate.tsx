@@ -11,7 +11,7 @@ import '@ionic/react/css/display.css';
 import { css, Global, ThemeProvider } from '@emotion/react';
 import { IonApp, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import React, { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import Content from "../components/Content";
 import theme from '../theme';
@@ -26,7 +26,7 @@ const PreviewTemplate: FC<{ children: ReactNode }> = ({ children }) => (
     <Global styles={css(ionicStyles)} />
     <IonReactRouter>
       <IonApp>
-        <Content padding="12px">
+        <Content padding="24px">
           {children}
         </Content>
       </IonApp>

@@ -3,7 +3,7 @@ import React from 'react';
 
 import Button  from '../components/Button';
 import { type ButtonProps } from "../components/Button"
-import PreviewTemplate from "../core/PreviewTemplate";
+import PreviewTemplate from "./PreviewTemplate";
 
 export default {
   title: 'Ionic Styled/Button',

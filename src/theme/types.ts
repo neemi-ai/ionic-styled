@@ -149,16 +149,4 @@ export type StyledProps = {
   theme?: ThemeType;
 };
 
-export type BoxStyleProps = React.ComponentProps<any>
-& SpaceProps
-& FlexboxProps
-& SizeProps
-& ShadowProps
-& LayoutProps
-& BorderProps
-& BackgroundProps
-& ColorProps
-& TypographyProps
-& {
-  cursor?: string;
-};
+

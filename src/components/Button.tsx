@@ -1,9 +1,8 @@
 import { IonButton, IonIcon } from '@ionic/react';
-import React from 'react';
 
+import paddingProps from "../custom/paddingProps";
 import ionicStyled from "../util/ionicStyled";
 import mapStyles from '../util/mapStyles';
-import paddingProps from "../core/paddingProps";
 
 const CssPropMap = {
   background: '--background',
