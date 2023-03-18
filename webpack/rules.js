@@ -1,11 +1,14 @@
-const { inDev } = require('./webpack.helpers');
+const { inDev } = require('./helpers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = [
   {
     test: /\.tsx?$/,
     use: {
-      loader: 'ts-loader'
+      loader: 'ts-loader',
+      options: {
+        transpileOnly: true,
+      }
     },
   },
   {
@@ -33,9 +36,14 @@ module.exports = [
   },
   {
     test: /\.(gif|jpe?g|tiff|png|webp|bmp|svg|eot|ttf|woff|woff2)$/i,
-    type: 'asset',
-    generator: {
-      filename: 'assets/[hash][ext][query]',
-    },
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'assets',
+        }
+      }
+    ]
   },
 ];

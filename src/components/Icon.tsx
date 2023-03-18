@@ -14,7 +14,7 @@ export type IconProps = {
   icon?: string;
   fontSize?: string | number;
   cursor?: string;
-  onClick?: () => void;
+  onClick?: (event: any) => void;
   id?: string;
 } & typeof IonIcon.defaultProps & Map;
 

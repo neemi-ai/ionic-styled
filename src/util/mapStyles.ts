@@ -26,10 +26,6 @@ const mapStyles = <TMap extends Map>(map: TMap) => (props: Props) => {
       return acc;
     }, {});
 
-  console.log('==============================================\n') // eslint-disable-line no-console
-  console.log('styles', styles, '\n') // eslint-disable-line no-console
-  console.log('==============================================\n') // eslint-disable-line no-console
-
   return styles;
 }
 
