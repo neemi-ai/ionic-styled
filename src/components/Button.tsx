@@ -24,6 +24,7 @@ const CssPropMap = {
   opacity: '--opacity',
   rippleColor: '--ripple-color',
   transition: '--transition',
+  textTransform: '--text-transform',
   ...paddingProps
 };
 
@@ -53,6 +54,10 @@ const Button: React.FC<ButtonProps> = ({
 
     if (rightIcon) {
       return <IonIcon icon={rightIcon} slot="end" src={rightIcon} />;
+    }
+
+    if ((rightIcon || leftIcon) && !children) {
+      return <IonIcon icon={rightIcon || leftIcon} slot="icon-only" src={rightIcon || leftIcon} />
     }
 
     return null;
